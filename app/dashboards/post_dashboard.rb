@@ -9,7 +9,7 @@ class PostDashboard < Administrate::BaseDashboard
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
     user: Field::BelongsTo,
-    id: Field::Number,
+    id: Field::Number.with_options(searchable: true),
     date: Field::DateTime,
     rationale: Field::Text,
     created_at: Field::DateTime,
